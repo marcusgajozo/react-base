@@ -12,9 +12,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     requireConfigFile: false,
+    babelOptions: {
+      parserOpts: {
+        plugins: ['jsx'],
+      },
+    },
   },
 
-  plugins: ['react', 'prettier', 'react-hooks', 'jsx', 'flow', 'typescript'],
+  plugins: ['react', 'prettier', 'react-hooks'],
 
   rules: {
     'prettier/prettier': 'error',
